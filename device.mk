@@ -60,8 +60,6 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,livedisplay_sysfs,enable_ab,true)
 
 # Power
-$(call soong_config_set,qtipower,tap_to_wake_node,/sys/class/touchscreen/primary/gesture)
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
