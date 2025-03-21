@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "ProductFrameworksResFogos",
+    name: "ProductFrameworksResFogo",
     product_specific: true,
 }

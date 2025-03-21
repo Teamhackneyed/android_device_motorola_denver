@@ -23,15 +23,11 @@ $(call inherit-product, device/motorola/sm6375-common/common.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
-    FrameworksResFogos \
-    FrameworksResFogosXT2363-8 \
-    FrameworksResFogosXT2363-9 \
-    LineageSystemUIFogos \
-    ProductFrameworksResFogos \
-    SystemUIResFogos \
-    WifiResFogos \
-    WifiResFogosXT2363-8 \
-    WifiResFogosXT2363-9
+    FrameworksResFogo \
+    LineageSystemUIFogo \
+    ProductFrameworksResFogo \
+    SystemUIResFogo \
+    WifiResFogo
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -72,7 +68,7 @@ $(foreach DEVICE_SKU, $(DEVICE_SKUS), \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    sensors.fogos
+    sensors.fogo
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -82,4 +78,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/motorola/fogos/fogos-vendor.mk)
+$(call inherit-product, vendor/motorola/fogo/fogo-vendor.mk)

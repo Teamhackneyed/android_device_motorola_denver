@@ -3,13 +3,13 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/motorola/fogos
+DEVICE_PATH := device/motorola/fogo
 
 # Inherit from motorola sm6375-common
 include device/motorola/sm6375-common/BoardConfigCommon.mk
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := fogos
+TARGET_BOOTLOADER_BOARD_NAME := fogo
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
@@ -20,8 +20,8 @@ ODM_MANIFEST_DN_FILES := $(DEVICE_PATH)/sku/manifest_dn.xml
 ODM_MANIFEST_N_FILES := $(DEVICE_PATH)/sku/manifest_n.xml
 
 # Kernel
-BOARD_KERNEL_CMDLINE += androidboot.hab.product=fogos
-TARGET_KERNEL_CONFIG += vendor/ext_config/moto-holi-fogos.config
+BOARD_KERNEL_CMDLINE += androidboot.hab.product=fogo
+TARGET_KERNEL_CONFIG += vendor/ext_config/moto-holi-fogo.config
 
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
@@ -41,12 +41,12 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
 
 # Security
-BOOT_SECURITY_PATCH := 2025-01-01
+BOOT_SECURITY_PATCH := 2025-02-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # Verified Boot
-BOARD_AVB_ROLLBACK_INDEX := 14
-BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 14
+BOARD_AVB_ROLLBACK_INDEX := 11
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 11
 
 # inherit from the proprietary version
-include vendor/motorola/fogos/BoardConfigVendor.mk
+include vendor/motorola/fogo/BoardConfigVendor.mk
