@@ -7,3 +7,6 @@ ro.opa.device_model_id=motorola-fogo
 
 # Motorola
 ro.mot.build.customerid=global
+
+# Radio
+persist.vendor.radio.fi_supported=1
