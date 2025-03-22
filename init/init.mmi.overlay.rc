@@ -58,6 +58,7 @@ on post-fs-data
 on early-init
     insmod /vendor/lib/modules/leds_aw99703.ko
     insmod /vendor/lib/modules/leds_lm3697.ko
+    insmod /vendor/lib/modules/mcDrvModule.ko
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -r -d /vendor/lib/modules/${ro.vendor.mot.gki.path} zram
 
 on boot
@@ -74,6 +75,17 @@ on boot
     chmod 0660 /sys/class/capsense/int_state
     chmod 0660 /sys/class/capsense/reg
     chmod 0660 /sys/class/capsense/fw_download_status
+    # Change ownership for capsensor
+    chown root input /sys/class/sensors/Moto\ CapSense\ Ch0/enable
+    chown root input /sys/class/sensors/Moto\ CapSense\ Ch0/poll_delay
+    chown root input /sys/class/sensors/Moto\ CapSense\ Ch1/enable
+    chown root input /sys/class/sensors/Moto\ CapSense\ Ch1/poll_delay
+    chown root input /sys/class/sensors/Moto\ CapSense\ Ch2/enable
+    chown root input /sys/class/sensors/Moto\ CapSense\ Ch2/poll_delay
+    chown root input /sys/class/sensors/Moto\ CapSense\ Ch3/enable
+    chown root input /sys/class/sensors/Moto\ CapSense\ Ch3/poll_delay
+    chown root input /sys/class/sensors/Moto\ CapSense\ Ch4/enable
+    chown root input /sys/class/sensors/Moto\ CapSense\ Ch4/poll_delay
     # touch
     chown system system /sys/class/touchscreen/primary/interpolation
     chmod 0660 /sys/class/touchscreen/primary/interpolation
@@ -88,12 +100,6 @@ on boot
 
     write /proc/sys/vm/dirty_background_bytes 26214400
     write /proc/sys/vm/dirty_bytes 104857600
-
-on fs
-    insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/rbs_fod_mmi.ko
-
-on boot && property:ro.vendor.mot.gki.path=5.4-gki
-    insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/nfc_i2c.ko
 
 on late-init
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/qpnp_adaptive_charge.ko
@@ -132,7 +138,7 @@ on property:sys.boot_completed=1
     chmod 0660 /sys/class/touchscreen/primary/stowed
 
 on init
-    insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/chipone_tddi_v2_mmi.ko
+    insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/nova_0flash_mmi.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/ilitek_v3_mmi.ko
 
 on property:dev.bootcomplete=1 && property:ro.vendor.hw.ram=4GB
