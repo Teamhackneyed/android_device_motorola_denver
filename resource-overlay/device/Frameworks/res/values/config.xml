@@ -7,19 +7,19 @@
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
-        <item>60</item>
+        <item>70</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about touching a virtual key -->
     <integer-array name="config_virtualKeyVibePattern">
         <item>0</item>
-        <item>50</item>
+        <item>30</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback when selecting an hour/minute tick of a Clock -->
     <integer-array name="config_clockTickVibePattern">
         <item>0</item>
-        <item>40</item>
+        <item>20</item>
     </integer-array>
 
     <!-- Minimum screen brightness setting allowed by power manager.
@@ -181,7 +181,7 @@
     </integer-array>
 
     <!-- MMS user agent string -->
-    <string name="config_mms_user_agent" translatable="false">motog345g</string>
+    <string name="config_mms_user_agent" translatable="false">motog5g2024</string>
 
     <!-- MMS user agent prolfile url -->
     <string name="config_mms_user_agent_profile_url" translatable="false">http://uaprof.motorola.com/phoneconfig/motov1/Profile/motov1.rdf</string>
