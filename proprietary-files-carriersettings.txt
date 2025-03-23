@@ -828,7 +828,6 @@ product/etc/CarrierSettings/s302220gid1_3d_7530.pb
 product/etc/CarrierSettings/s302220gid1_3d_8030.pb
 product/etc/CarrierSettings/s302220gid1_3d_9030.pb
 product/etc/CarrierSettings/s302220spn_3d_wom.pb
-product/etc/CarrierSettings/s302220spn_3d_wom_20_roaming.pb
 product/etc/CarrierSettings/s302220spn_3d_wom_20_roaming_20_int.pb
 product/etc/CarrierSettings/s302221gid1_3d_4b4f.pb
 product/etc/CarrierSettings/s302221gid1_3d_4d4f.pb
