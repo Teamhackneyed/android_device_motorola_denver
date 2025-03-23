@@ -8,5 +8,8 @@ ro.opa.device_model_id=motorola-fogo
 # Motorola
 ro.mot.build.customerid=global
 
+# NFC
+persist.nfc_cfg.config_file_name=libnfc-nci_SN220.conf
+
 # Radio
 persist.vendor.radio.fi_supported=1
