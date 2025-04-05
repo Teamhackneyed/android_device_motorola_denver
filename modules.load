@@ -23,7 +23,6 @@ q6_notifier_dlkm.ko
 wsa881x_analog_dlkm.ko
 lzo-rle.ko
 wcd938x_dlkm.ko
-sec_nfc.ko
 q6_dlkm.ko
 aw882xx_acf.ko
 mbhc_dlkm.ko
