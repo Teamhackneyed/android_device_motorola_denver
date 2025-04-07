@@ -25,7 +25,6 @@ $(call inherit-product, device/motorola/sm6375-common/common.mk)
 PRODUCT_PACKAGES += \
     FrameworksResDevice \
     LineagePlatformDevice \
-    LineageSystemUIDevice \
     ProductFrameworksResDevice \
     SystemUIResDevice \
     WifiResDevice
@@ -63,9 +62,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
 # Sensors
-PRODUCT_PACKAGES += \
-    sensors.fogo
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
