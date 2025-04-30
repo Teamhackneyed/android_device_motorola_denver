@@ -41,6 +41,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
 
+# FM
+TARGET_HAS_FM := true
+
+PRODUCT_PACKAGES += \
+    FM2
+
 # Init
 PRODUCT_PACKAGES += \
     init.mmi.overlay.rc \
