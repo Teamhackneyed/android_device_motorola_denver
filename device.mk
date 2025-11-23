@@ -60,7 +60,7 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery/input_current_limit)
 
 # LiveDisplay
-$(call soong_config_set,livedisplay_sysfs,enable_ab,true)
+$(call soong_config_set_bool,livedisplay_sysfs,enable_ab,true)
 
 # Power
 PRODUCT_COPY_FILES += \
