@@ -52,10 +52,6 @@ PRODUCT_PACKAGES += \
     init.mmi.overlay.rc \
     init.oem.fingerprint2.sh
 
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light-service.lineage
-
 # Lineage Health
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery/input_current_limit)
 
